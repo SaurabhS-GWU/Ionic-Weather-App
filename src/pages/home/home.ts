@@ -20,11 +20,10 @@ export class HomePage {
 
   ionViewWillEnter(){
   	 
-  		alert("Hola");
 
   		this.storage.get('location').then((val)=>{
   			if(val != null) {
-
+  				this.location = JSON.parse(val);
 
   			}
   			else{
