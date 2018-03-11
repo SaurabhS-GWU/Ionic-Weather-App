@@ -24,7 +24,7 @@ export class SettingsPage {
     this.storage.get('location').then((val)=>{
         if(val != null) {
           let location = JSON.parse(val); 
-          this.city = location.city; 
+          this.city = location.city;
           this.state = location.state; 
         }
         else{
@@ -43,8 +43,8 @@ export class SettingsPage {
   saveForm(){
     
     let location = {
-      city: this.city; 
-      state: this.state; 
+      city: this.city,
+      state: this.state  
     }
     this.storage.set('location', JSON.stringify(location));
     this.navCtrl.push(HomePage);
